@@ -1,0 +1,58 @@
+@use "page.scss";
+
+p {
+    font-weight: bold;
+}
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.pf-c-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* Ensures dynamic sizing */
+}
+
+.pf-c-table th, .pf-c-table td {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #d2d2d2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+.pf-c-table td:hover::after {
+    content: attr(data-full-text);
+    position: absolute;
+    background-color: #f8f8f8;
+    border: 1px solid #d2d2d2;
+    padding: 8px;
+    z-index: 10;
+    white-space: pre-wrap;
+    max-width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.button-cell button {
+    cursor: pointer;
+}
+
+.form-container {
+    margin-bottom: 20px;
+}
+
+.console-output {
+    border: 1px solid #d2d2d2;
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+    background-color: #f8f8f8;
+    white-space: pre-wrap;
+}
